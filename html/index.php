@@ -1,14 +1,8 @@
 <?php
 //error_reporting(-1);
 
-$dsn = 'mysql:host=localhost;dbname=nukotan_live';
-$username = 'nukotan';
-$password = '0716';
-$options = array(
-	PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
-);
-
-$dbh = new PDO($dsn, $username, $password, $options);
+require_once('../lib/include/nukotanDbh.php');
+$dbh = getPDO();
 
 print <<< DOC_END
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -132,7 +126,7 @@ DOC_END;
 		echo "</ul><p>から絞込み</p></div>";
 	}
 	
-	$sql = "SELECT song, count(song) as num FROM nukotan_live $condition GROUP BY song ORDER BY num DESC";
+	$sql = "SELECT id, song, count(song) as num FROM nukotan_live $condition GROUP BY song ORDER BY num DESC";
 
 print <<< DOC_END
 	<table id="nukotanTable" class="tablesorter">
@@ -145,7 +139,7 @@ DOC_END;
 
 	foreach ($dbh->query($sql) as $row) {
 		print "<tr>
-			<td>$row[song]</td>
+			<td>$row[song]<a href=\"./detail.php?id=$row[id]\" target=\"_blank\">[♪]</a></td>
 			<td>$row[num]</td>
 		</tr>";
 	}
