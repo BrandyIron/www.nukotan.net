@@ -98,7 +98,7 @@ function insertLiveInfo($liveinfo, $param) {
 		if ($res[0]['count(id)'] == 0 || $param != "new") {
 			$sql = "INSERT INTO nukotan_live (title, date, place, song) VALUES (:live_title, :live_date, :live_place, :song)";
 			$sth = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
-			$sth->execute(array(':live_title' => $liveinfo[live_title], ':live_date' => $liveinfo[live_date], ':song' => $song));
+			$sth->execute(array(':live_title' => $liveinfo[live_title], ':live_date' => $liveinfo[live_date], ':live_place' => $liveinfo[live_place], ':song' => $song));
 
 			echo "insert entry : $liveinfo[live_date] $song\n";
 		}
