@@ -36,7 +36,7 @@ foreach ($res as $val) {
 	}
 }
 
-echo $message;
+echo date('Ymd:His') . ' : ' . $message . "\n";
 
 // Update tweet count
 $sql = "UPDATE nukotan_word SET tweet_count = (tweet_count + 1) WHERE id = :pickupId";
