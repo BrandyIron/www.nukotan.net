@@ -1,6 +1,7 @@
 <?php
 include(dirname(__FILE__) . '/../include/simplehtmldom/simple_html_dom.php');
 
+date_default_timezone_set('Asia/Tokyo');
 $lastmonth = date('Ym', strtotime(date('Y-m-1').' -1 month'));
 $thismonth = date('Ym');
 
