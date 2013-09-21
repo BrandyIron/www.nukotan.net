@@ -1,6 +1,8 @@
 <?php
 require_once(dirname(__FILE__) . '/../include/twitteroauth/twitteroauth.php');
 
+date_default_timezone_set('Asia/Tokyo');
+
 $consumerKey = 'fjf5KDnluH7uwqwJ5IAjGg';
 $consumerSecret = 'LknfyF9vMKl4fsDf6WSuO3KgCjGYurSmGs3kTrO3UOQ';
 $accessToken = '1890791580-u1xYZY6FwWGfMuunTqSWUKmm77SQbSENVp7DcEF';
