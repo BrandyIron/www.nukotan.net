@@ -1,5 +1,5 @@
 <?php
-include('simplehtmldom/simple_html_dom.php');
+include(dirname(__FILE__) . '/../include/simplehtmldom/simple_html_dom.php');
 
 $lastmonth = date('Ym', strtotime(date('Y-m-1').' -1 month'));
 $thismonth = date('Ym');
