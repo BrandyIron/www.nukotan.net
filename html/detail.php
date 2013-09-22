@@ -2,6 +2,8 @@
 require_once(dirname(__FILE__) . '/../lib/include/nukotanDbh.php');
 $dbh = getPDO();
 
+date_default_timezone_set('Asia/Tokyo');
+
 // Get Song Title
 $sql = "SELECT id, song FROM nukotan_live WHERE id = :id";
 $sth = $dbh->prepare($sql);
