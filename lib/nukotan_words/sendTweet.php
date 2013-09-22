@@ -9,6 +9,7 @@ $twitterURL = 'https://api.twitter.com/1.1/statuses/update.json';
 
 $mode = $argv[1];
 
+
 $dsn = 'mysql:host=localhost;dbname=nukotan_word';
 $username = 'nukotan';
 $password = '0716';
