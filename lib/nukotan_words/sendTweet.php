@@ -1,13 +1,13 @@
 <?php
 require_once(dirname(__FILE__) . '/../include/twitteroauth/twitteroauth.php');
+require_once(dirname(__FILE__) . '/../../data/twitter_key.php');
 
 date_default_timezone_set('Asia/Tokyo');
 
-$consumerKey = 'fjf5KDnluH7uwqwJ5IAjGg';
-$consumerSecret = 'LknfyF9vMKl4fsDf6WSuO3KgCjGYurSmGs3kTrO3UOQ';
-$accessToken = '1890791580-u1xYZY6FwWGfMuunTqSWUKmm77SQbSENVp7DcEF';
-$accessTokenSecret = 'blXZtbXhnZ1jZvPXEz4nYoGNNKWFVHt2FlZ37iICyE';
+
 $twitterURL = 'https://api.twitter.com/1.1/statuses/update.json';
+
+$mode = $argv[1];
 
 $dsn = 'mysql:host=localhost;dbname=nukotan_word';
 $username = 'nukotan';
@@ -38,16 +38,16 @@ foreach ($res as $val) {
 	}
 }
 
-echo date('Ymd:His') . ' : ' . $message . "\n";
+echo date('Ymd-His') . ' : ' . $message . "\n";
 
 // Update tweet count
 $sql = "UPDATE nukotan_word SET tweet_count = (tweet_count + 1) WHERE id = :pickupId";
 $sth = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
-$sth->execute(array(':pickupId' => $pickupId));
+if ($mode == "run") $sth->execute(array(':pickupId' => $pickupId));
 
 // Send tweet
 $to = new TwitterOAuth($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
-$req = $to->OAuthRequest($twitterURL, 'POST', array('status' => $message));
+if ($mode == "run") $req = $to->OAuthRequest($twitterURL, 'POST', array('status' => $message));
 
 
 ?>

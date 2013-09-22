@@ -19,14 +19,19 @@ $dbh = new PDO($dsn, $username, $password, $options);
 	
 // Get monthly archive
 $monthlyArchives = array();
-$html = file_get_html($baseurl);
-foreach ($html->find('div.menu_box div.linktext a[href]') as $element) {
-	preg_match('/\/\?month=[0-9]{6}/', $element, $matches);
-	if ($matches) {
-		array_push($monthlyArchives, $matches[0]);
+
+if ($argc == 1) {
+	$html = file_get_html($baseurl);
+	foreach ($html->find('div.menu_box div.linktext a[href]') as $element) {
+		preg_match('/\/\?month=[0-9]{6}/', $element, $matches);
+		if ($matches) {
+			array_push($monthlyArchives, $matches[0]);
+		}
 	}
+	$monthlyArchive = array_unique($monthlyArchives);
+} elseif ($argc == 2) {
+	array_push($monthlyArchives, '/?month=' . $argv[1]);
 }
-$monthlyArchive = array_unique($monthlyArchives);
 
 // Get day archive
 foreach ($monthlyArchives as $monthlyArchive) {
