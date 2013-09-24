@@ -31,9 +31,9 @@ $pickupId = $candidateArr[rand(0, count($candidateArr))];
 foreach ($res as $val) {
 	if ($val['id'] == $pickupId) {
 		if (mb_strlen($val['word']) < 110) {
-			$message = $val['word'] . ' - ' . $val['referer'];
+			$message = $val['word'] . ' ' . $val['referer'];
 		} else {
-			$message = mb_substr($val['word'], 0, 110) . '... - ' . $val['referer'];
+			$message = mb_substr($val['word'], 0, 110) . '... ' . $val['referer'];
 		}
 	}
 }
