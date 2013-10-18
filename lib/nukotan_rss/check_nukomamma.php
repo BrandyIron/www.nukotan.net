@@ -57,6 +57,7 @@ if (!$res) {
 if ($update_flag) {
 	$message = mb_substr("
 黒猫のねこまんま通信が更新されました(*´Д`)ﾊｧﾊｧ 
+
 $title", 0, 110);
 	$message .= " $link";
 	echo date('Ymd-His') . ' : ' . $message . "\n";
