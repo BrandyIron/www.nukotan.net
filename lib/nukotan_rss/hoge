@@ -1,0 +1,441 @@
+SimpleXMLElement Object
+(
+    [channel] => SimpleXMLElement Object
+        (
+            [title] => 陰陽座　『黒猫のねこまんま通信』
+            [link] => http://nekomamma.jugem.jp/
+            [description] => SimpleXMLElement Object
+                (
+                )
+
+            [items] => SimpleXMLElement Object
+                (
+                )
+
+        )
+
+    [item] => Array
+        (
+            [0] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=710
+                    [title] => 秋の香り
+                    [description] => &nbsp;公式庵頁トップにて、『龍凰珠玉』のジャケットとアーティスト写真が公開されていますが、皆さんご覧になっていただけましたか？今作も、野波浩さんの素晴らしい写真と瞬火兄上渾身のデザインが一体となった最高にカッコイイ仕上がりになっていますので、実物を楽し...
+                )
+
+            [1] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=709
+                    [title] => 着々と
+                    [description] => &nbsp;LIVE DVD『式神謳舞』に関する作業が着々とすすんでいます！TDの確認作業中でも思わず胸が熱くなるほどの熱気がギューッと詰まっていて、完成が待ち遠しいです！その傍ら、予約特典のサインを書いたり和気藹々とおしゃべりしたり、元気に頑張っています♪いろいろ楽...
+                )
+
+            [2] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=708
+                    [title] => One of These Days
+                    [description] => &nbsp;7年ぶりのベストアルバム『龍凰珠玉』の詳細が発表されました！兄上のブログでも触れられていますが、今回は、なんと新曲が2曲収録されています。私も、大好きなアーティストのCDはぜひ手元に置いておきたいと思う質で、ベストはもちろん、リミックス盤やリマスター...
+                )
+
+            [3] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=707
+                    [title] => サイン
+                    [description] => &nbsp;すでにご案内のとおり、10月15日発売のスコアブック『鬼子母神』を予約してくださった方にはメンバー直筆サイン入りオリジナル色紙を特典としてプレゼントさせていただきます♪そのオリジナル色紙にみんなで心をこめてサインしましたよ！じゃじゃじゃーん！皆さんの...
+                )
+
+            [4] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=706
+                    [title] => 中秋の名月
+                    [description] => &nbsp;本日は中秋の名月、しかも満月です。雲のない夜空がひろがっていたのでまんまるの綺麗なお月様を見ることができました。次に満月の中秋の名月を迎えるのは8年後だそうなので、しっかりと目に焼き付けましたよ♪これだけではなんなので、何となく目の前のスピーカーを...
+                )
+
+            [5] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=705
+                    [title] => リンドウ
+                    [description] => &nbsp;リンドウが咲きました！新ミヤマという品種です。実は、いつまでたっても全然咲かず、堅いつぼみのまま枯れかけていた物もあったので、液肥をあげたり、日当たりや風通しを工夫したり、話しかけたり（？）と試行錯誤していました。そうしたら、少しずつ花が開いてき...
+                )
+
+            [6] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=704
+                    [title] => 7年振りに！
+                    [description] => 陰陽座公式庵頁に、ベストアルバム『龍凰珠玉』発売決定のお知らせが掲載されました！実に7年振りのベストアルバムということで、皆さんの熱い魂に支えていただいて歩んで来た道のりを思うと、とても感慨深いです。そしてそして、このベストアルバムとは別の純然たる新作...
+                )
+
+            [7] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=702
+                    [title] => 本日のお茶とおやつ
+                    [description] => &nbsp;鉢植えのスペアミントとレモンバームの摘心、間引きをしたので、摘み取った葉をネパール緑茶に入れてみました。うーん、爽やかで美味しい〜！おやつは富山銘菓「月世界」（つきせかい）。なんと東京のお店で見つけたので、久しぶりに食べることができました。素朴な...
+                )
+
+            [8] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=700
+                    [title] => 長月
+                    [description] => &nbsp;今日から9月。もう9月ですよ！びっくり。と言ってもまだまだ残暑が厳しい折ですし、気候も不安定で心配ですので、どうかお気を付けくださいね。陰陽座も色々と作業が目白押しですが、ますます元気に頑張ります！さてさて、孔雀アスターが綺麗に咲きました。以前ご紹...
+                )
+
+            [9] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=699
+                    [title] => ベクシンスキ
+                    [description] => &nbsp;注文していたベクシンスキの画集が届きました！ポーランドの画家、ズジスワフ・ベクシンスキ（昔はベクシンスキーと表記）との出会いははるか昔、よく行っていた洋書屋さんに置いてあった雑誌か何かで見かけてその寂寞としつつも強烈な世界観に目が釘付けになったの...
+                )
+
+            [10] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=697
+                    [title] => 本日のお茶とおやつ
+                    [description] => &nbsp;おやつにスコーンを作りました。外側がザクッと固めでビスケット風なものが好きなので、そのように仕上げてみました。スコーンにはハチミツを付けて食べるのが一番お気に入りです。今日はからすさんしょうのハチミツ。初めて食べたけどとっても美味しい！お茶はニル...
+                )
+
+            [11] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=696
+                    [title] => 地蔵盆
+                    [description] => &nbsp;私が子供の頃、8月の23日、24日あたりに「地蔵盆」という風習が行われていました。街角のお地蔵さまを綺麗に飾り付けて、灯籠を立て、お供えをするんです。その様子がとってもきれいで、見に行くのが楽しみでした。お地蔵さまは子供の守り神なので、子供たちがお参...
+                )
+
+            [12] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=695
+                    [title] => バジル
+                    [description] => &nbsp;育ってきたバジルを生プチトマト入りのトマトソース＆モッツァレラチーズと合わせて、出来上がりにもトッピング！ふっふっふっふっふっふ…。今日でお盆休みもおしまいでしょうか？まだまだ暑いですが、しっかり食べてお元気にお過ごしください♪
+                )
+
+            [13] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=694
+                    [title] => 冬ツアー発表！
+                    [description] => &nbsp;とうとう発表になりました！2013年冬ツアー！まだまだ先の話ではありますが、陰陽座一同、今からワクワクドキドキです！皆さんとまたライヴで一緒に魂を燃やすためにも、音源製作やその他の作業もしっかり頑張りますね！どうか楽しみに待っていてください！あっ、今...
+                )
+
+            [14] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=693
+                    [title] => 花盛り
+                    [description] => 記録的な猛暑が続いていますが、皆さんお元気ですか？お盆休みに入った方もいらっしゃるかと思いますが、こう暑いとお出かけするのも大変ですよね。私の好きな青い花（写真では紫ぽいですが）サルビア・ガラニチカが咲いています。とっても綺麗〜♪キキョウの鉢植えも蕾が...
+                )
+
+            [15] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=692
+                    [title] => 本日のお茶
+                    [description] => &nbsp;ルピシアの「ハツコイ」です。緑茶にレモングラスが入った爽やかな風味が夏にピッタリでした！今日は久々に登場のケロヤンとお茶会。カップもお揃いなイメージにしてみましたよ♪お気づきの方もいらっしゃるかもしれませんが、ティーカップ＆ソーサーをのんびりと集...
+                )
+
+            [16] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=691
+                    [title] => 悩むー！
+                    [description] => ちょっと前に「断捨離」という言葉が流行しましたが、今まさに私も決行中。要するに、お部屋の物の整理をしているのですが、どうしても処分できないのが「本」です。色んな本は読みたいけれど、収納スペースには限りがあるのでそこから溢れたものは何とかしなくちゃいけな...
+                )
+
+            [17] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=689
+                    [title] => そしてー！
+                    [description] => &nbsp;ムーミンTシャツ！愛らしい！調子に乗ってアップしてごめんなさい！皆さんにお目にかかれない分、いっぱい更新してみました。なぜならばくろねこは　ちょっとまえに　あいふぉんを　てにいれた！くろねこの　こうしんひんどが　３　あがった！じぶんどりの　じゅも...
+                )
+
+            [18] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=688
+                    [title] => からのー！
+                    [description] => &nbsp;おおくろねこよ　いちにちに　にどもぶろぐを　あっぷするとは　なにごとだカエルTシャツ！かわいい！柄が見えにくくてごめんなさい〜。試行錯誤して腕がつりそうです（笑）別で撮ればよかったのね！
+                )
+
+            [19] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=687
+                    [title] => 夏なので
+                    [description] => &nbsp;ちょっと髪をスッキリさせてもらいました。レイヤーを上の方に入れて、全体的にボリュームを減らした感じです。髪の量が多いので、放っておくと「アダムス・ファミリー」に出てくる「カズン・イット」みたいになっちゃうんです。今日も暑いですねー！皆さんどうぞ体...
+                )
+
+            [20] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=686
+                    [title] => 本日のごはん
+                    [description] => &nbsp;以前、沖縄に行ったときに食べて大好きになった料理「人参しりしり」。「しりしり器」を使って細く削いだ人参とツナ缶を使った炒め物なのですが、簡単かつ美味しいのでよく作ります。栄養もたっぷりですよね！ちなみに、コレが「しりしり器」。包丁で均等に切るより...
+                )
+
+            [21] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=685
+                    [title] => 本日のお茶
+                    [description] => &nbsp;暑くても紅茶は飲みますよー♪というわけで、本日のお茶は尾道紅茶のキャンディです。こちらのシリーズは、缶がとってもかわいい！紅茶缶に黒猫のイラストが描いてあるなんて、しあわせすぎてひれ伏したくなります（笑）リサと一緒にお茶会だー♪わあーい！
+                )
+
+            [22] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=684
+                    [title] => 葉月
+                    [description] => 8月に入りました！本当に毎日暑いですが、皆さんお元気ですか？陰陽座は、来たるべきあんなことやこんなことへ向けて、元気に色々と準備中です！皆さんは、夏のレジャーなどを計画されていたりするのでしょうか？海や山へ出かけたり、お祭りに行ったり、考えるだけでもワ...
+                )
+
+            [23] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=683
+                    [title] => 赤といえば
+                    [description] => &nbsp;SG13東京公演の際、ヘアメイクさんに塗っていただいたリップカラーがとっても気に入ったので、買いに行ってきました。色番号まで記憶していなかったのでたぶんコレ…あれ、こっちかな？と迷って２種類購入♪NARS サテンリップペンシル9206と9207。どちらもとっても綺...
+                )
+
+            [24] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=682
+                    [title] => ありがとうございます！
+                    [description] => 　本日7月16日、私の誕生日にたくさんのお祝いのメッセージやプレゼント、お花などをいただき、本当にありがとうございました！！皆さんのあたたかく、やさしく、熱い魂でお祝いしていただけて、宇宙一の幸せを噛みしめています！この世に生まれてきたからこそ、陰陽座の...
+                )
+
+            [25] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=681
+                    [title] => SG13東京！
+                    [description] => &nbsp;『しきがみのつどい2013』東京公演にお越しくださった皆さん、どうもありがとうございました！！とっても幸せで楽しかった『つどい』の最終日、ステージに出た途端、超強力な式神の皆さんの魂が押し寄せてきて、感激で体が震えました！性別も年齢もさまざまな皆さん...
+                )
+
+            [26] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=680
+                    [title] => 改めて、SG13大阪！
+                    [description] => &nbsp;『しきがみのつどい2013』大阪公演にお越し下さった皆さん、どうもありがとうございました！！陰陽座結成の地にて、たくさんの式神の皆さんから最強の魂をいただけて、幸せいっぱいでした！大阪MUSE HALLのステージに立たせていただくのも久しぶりだったので、正に...
+                )
+
+            [27] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=679
+                    [title] => SG13大阪終了！
+                    [description] => SG13大阪公演終了しました！取り急ぎ、皆さんどうもありがとうございました！！写真はライブ終了後、着替えはしたけど舞台メイクのままの変な私です〜。
+                )
+
+            [28] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=678
+                    [title] => 最高の美味！
+                    [description] => &nbsp;名古屋公演を終え、東京へ帰る前にちょっと寄り道をして、E.L.Lオーナーご夫妻のおすすめのお店にて桑名名物のはまぐり料理をいただきました！！もともと貝料理は大好きなのですが、こちらは今まで食べたことないぐらいプリップリかつジューシーなはまぐりで、もう...
+                )
+
+            [29] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=677
+                    [title] => SG13名古屋！
+                    [description] => &nbsp;『しきがみのつどい2013』名古屋公演にお越し下さった皆さん、どうもありがとうございました！！久しぶりのつどい、久しぶりの名古屋、久しぶりのE.L.L！！本当に幸せで幸せで、笑顔いっぱいの夜になりました！これから行われる大阪公演、東京公演に足をお運びくだ...
+                )
+
+            [30] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=676
+                    [title] => リハーサル終了！
+                    [description] => &nbsp;本日、無事にリハーサルが終了しました！あとは各自で細かい確認をしつつ、本番に備えるのみです！！！みんなでがんばります！！にゃーんぷ！！
+                )
+
+            [31] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=675
+                    [title] => 背中で語る！
+                    [description] => &nbsp;本日も激烈リハーサル！！しっかりと集中して、熱の入った充実の一日となりました。というわけで、熱く燃える男の背中シリーズをどうぞ！兄上招鬼さん狩姦さんみんなで熱く楽しく頑張ってます！
+                )
+
+            [32] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=674
+                    [title] => SG13バージョン！
+                    [description] => &nbsp;本日は、バスドラムのフロント・ヘッドをSG13バージョンにお召し替えしました♪張り替え職人、兄上の先導により、丁寧に張られていきます。そして完成したのがこちら！うーん、カッコイイ！！誠さんのドラム・プレイも炸裂しまくりですよー！
+                )
+
+            [33] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=673
+                    [title] => おフランス帰りの人
+                    [description] => &nbsp;本日もリハーサル！とっても充実した一日でした〜。リハの合間に、狩姦さんを激写する兄上！瞬「おっ！いいね〜いい表情だね〜。じゃあ最後にキメのポーズいってみようか！」狩「シェーーー！！」
+                )
+
+            [34] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=672
+                    [title] => 紫のTシャツの人
+                    [description] => &nbsp;本日もみんなで楽しくリハーサルでした！兄上のブログでメタリカのTシャツの写真が公開されていましたが、本日はロックTシャツ着用率が高かったのです！招鬼さんはゲイリー・ムーア！私はブラック・サバス！狩姦さんは…「僕だけ普通のTシャツ着てきてしもたァァァア...
+                )
+
+            [35] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=669
+                    [title] => SG13リハーサル！
+                    [description] => &nbsp;『しきがみのつどい2013』に向けてのリハーサルが開始されました！初日である本日は、とにかく式神の皆さんが投票してくださったあんな曲こんな曲を歌い演奏するのが楽しくて、うひゃほー！ってなってましたよ！本番に向けて、メンバー＆阿部さん＆誠さんスタッフチ...
+                )
+
+            [36] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=668
+                    [title] => Haircut 100
+                    [description] => 髪がだいぶ伸びてしまいました。ちょっと切ろうと思いますが、この髪型にしてから一番長くなったので記念に一枚♪カラーリングやパーマは一切していないので（よく「真っ黒に染めてますか？」とか「青を入れてますか？」と聞かれることがあるのですが、もともとが濃い黒髪...
+                )
+
+            [37] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=666
+                    [title] => たいせつに
+                    [description] => お部屋に飾ってあるタイプライターを撮ってみました♪米国Smith Corona社のもので、1930年製ですが、しっかり動きます。それにしても、80年以上前に作られたというのに、重厚な佇まいで美しいです。ずっと大事に使われていたんですね。機械や道具って、なるべく長く大切に...
+                )
+
+            [38] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=665
+                    [title] => ビヨウヤナギ
+                    [description] => &nbsp;昨日、私の小さな小さなガーデニングスペースのビヨウヤナギが咲きました！わーいわーい！この花が咲くと、「夏が来るな」と実感します。ちょっと剪定しすぎたかなあ…と不安になっていたので無事に花芽がたくさん出てくれてよかった！あまりお手入れができなくても...
+                )
+
+            [39] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=664
+                    [title] => 愛用ヘッドホン
+                    [description] => &nbsp;近頃めっきり「紅茶ブログ」の様相を呈してきた「ねこまんま通信」ですが、今日はちょっと音楽に関連した話題をお送りします♪写真は、私が愛用しているヘッドホンたち。一番左がJVCのスタジオモニターヘッドホンで、お世話になっているエンジニアさんのおすすめで瞬...
+                )
+
+            [40] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=663
+                    [title] => 小さなヴンダーカンマー
+                    [description] => &nbsp;コレクター気質というわけではないのですが、見つけるとつい手元に置きたくなるものがあります。私は昔からずっと変わらず石（鉱物・化石）、貝殻、植物の種子や木の実などが大好きで、子供の頃は膨大な数をお菓子の缶に詰めてコレクションしていました。大人になっ...
+                )
+
+            [41] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=662
+                    [title] => もうすぐ〆切です！
+                    [description] => &nbsp;梅雨入りしちゃいましたねえ。雨の日は嫌いというわけではないんですが、ずっと続くとなるとやっぱり何かと不便です。でも、空梅雨でも困りますから、この時期も楽しんで過ごしたいですね。私の場合、梅雨の楽しみは、なんと言ってもアジサイです。アジサイの名所は...
+                )
+
+            [42] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=661
+                    [title] => PURE ROCK JAPAN LIVE 2013!
+                    [description] => &nbsp;昨夜の『PURE ROCK JAPAN LIVE 2013』にお越しくださった皆さん、どうもありがとうございました！久々のライブ、久々のイベントということでドキドキでしたが、本当に楽しかったです！やっぱり音楽って、ロックって最高ですね！年齢も性別も超越して、ひとつになっ...
+                )
+
+            [43] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=660
+                    [title] => リハーサル終了！
+                    [description] => &nbsp;『PURE ROCK JAPAN LIVE 2013』 へ向けてのリハーサルが、無事に終了しました！とっても楽しくて、大充実のリハーサルでした！あとは本番を待つのみです！はー！もう今からドキドキワクワクです！！お越しいただける皆さん、ご一緒させていただく出演バンドの皆さん...
+                )
+
+            [44] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=657
+                    [title] => リハーサル！
+                    [description] => &nbsp;『PURE ROCK JAPAN LIVE 2013』に向けてのリハーサルが開始されました！久々にバンドで音を出しましたが、やっぱり最高に楽しいです！みんなの音が合わさると、血が沸き立ってくるような感じがします！準備体操をしながらはしゃぐ黒猫の図。わーい！本番に向かって...
+                )
+
+            [45] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=656
+                    [title] => Still Reigning
+                    [description] => &nbsp;&nbsp;すでに瞬火さんのブログでも触れられていますが、SLAYERのギタリスト、ジェフ・ハンネマン氏がお亡くなりになりました。いつかまたステージでギターを弾くお姿を拝見できると信じて待っていましたので、こんなにも早く旅立ってしまわれるとは、本当に残念でな...
+                )
+
+            [46] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=655
+                    [title] => 狩姦さん！
+                    [description] => &nbsp;本日は狩姦さんのお誕生日です！おめでとうございます！いつも直向きに、静かなる情熱を燃やして物事に向き合う狩姦さん。新たな年齢をむかえ、その華麗なギター・プレイもますます研ぎ澄まされることと思います。これからも共に頑張ろう！狩姦さんにほんほんえーい！
+                )
+
+            [47] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=654
+                    [title] => 春なので
+                    [description] => ここのところ雨降りの日が多くお散歩はおあずけだったので、時間が取れるときは衣替えや物の整理をしていました。春なのでお部屋の模様替えも良いかな〜と思ったりしつつも、ぐるぐる考えて、結局あまり変わらず。今日のお茶はネパールの緑茶。爽やかでおいしーい！！和の...
+                )
+
+            [48] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=653
+                    [title] => 寒の戻り
+                    [description] => 寒の戻りで、今日からしばらくまた寒くなるそうです。うーん、なかなか安定しませんね。きのうの夢に出てきたせいで食べたくなって、今日のおやつはパンケーキにしました。上に乗ってるのはブルーベリーです。せっかくなので、何枚か焼いて冷凍しましたよ♪お茶はダージリ...
+                )
+
+            [49] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=652
+                    [title] => 花盛り
+                    [description] => &nbsp;ツツジの季節です！きれい〜！各地でツツジ祭りなども行われているもようです。いいなあ、行ってみたいなあ。大阪では造幣局の桜の通り抜けも始まったみたいだし、花盛りですね〜。私もささやかに、お花を飾ってみました。リトアニア陶器のミルクピッチャーに、白い...
+                )
+
+            [50] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=651
+                    [title] => 今日のお茶とおやつ
+                    [description] => &nbsp;おやつは千疋屋のフルーツケーキ、お茶はウバです。ミルクティーにしても美味しいですが、ケーキの甘さを考えてストレートにしましたよ♪あたたかくなってきて、新たに植物を育てたいと考え中。やっぱりハーブがいいかなあ。でも今は、勝手に生えてきたスミレがかわ...
+                )
+
+            [51] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=650
+                    [title] => 今日もお茶
+                    [description] => &nbsp;今日も肌寒かったので、レモンとしょうがの紅茶にはちみつを入れてあたたまりました♪近頃、よく鳥の鳴き声が聞こえるので気をつけて観察していたら、ヒヨドリ、ツグミ、シジュウカラ、セグロセキレイの姿を確認することができましたよ。うれしいなあ♪でも、ヒヨちゃ...
+                )
+
+            [52] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=649
+                    [title] => 今日のお茶
+                    [description] => &nbsp;今朝はなんだか少し冷える気がして朝から紅茶をいただきました。木イチゴ、サクランボなど赤い果実が入った、さっぱり甘酸っぱい紅茶です。アイスティーにしても美味しいですが、やっぱりまだまだあたたかいものが嬉しいなあ♪紅茶はたくさんストックしてあるのです...
+                )
+
+            [53] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=641
+                    [title] => 卯月
+                    [description] => 皆さま、ご無沙汰しておりますがお元気にお過ごしですか？東京では早くに桜が開花し、見頃をむかえたと思ったら、このところの雨で散ってしまいそうですね。ゆっくりお花見には行けませんでしたが、所々で美しい桜の様子を見ることができて嬉しかったです。さて、陰陽座公...
+                )
+
+            [54] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=638
+                    [title] => まいにち
+                    [description] => &nbsp;少しずつ、バレンタインにいただいたチョコレートを堪能しています♪皆さん、心のこもった贈り物を本当にありがとうございます。さて、近頃ちょっとあたたかくなってきたかなあ、と思っていたらまた寒さがぶり返し、春らしくなるのはまだ先のようですね。寒い日でも...
+                )
+
+            [55] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=637
+                    [title] => 招鬼さん！
+                    [description] => &nbsp;本日は招鬼さんのお誕生日です！おめでとうございます！！質実剛健で男らしく何事も真摯に取り組む招鬼さん。ひとつ年を重ね、ますます素敵に輝いてください！これからも一緒に頑張ろうね！招鬼さんにほんほんえーい！！
+                )
+
+            [56] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=636
+                    [title] => ありがとう！
+                    [description] => &nbsp;2月14日、バン・アレン帯のお誕生日ことバレンタイン・デーに、たくさんの贈り物とメッセージをありがとうございました！取り急ぎお礼のみで申し訳ありませんが、皆さまのあたたかいお気持ちに心から感謝しつつ、活力として更に頑張ります！
+                )
+
+            [57] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=635
+                    [title] => 誠さん！
+                    [description] => &nbsp;本日は、陰陽座のスーパー・サポート・ドラマー誠さんのお誕生日です！おめでとうございます！！！そのドラム・プレイは勿論のこと、魂の熱さも最高に素晴らしい誠さん。新しい年齢を迎えられ、ますます輝かれることと思います！これからもどうぞよろしくお願いしま...
+                )
+
+            [58] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=634
+                    [title] => 2013
+                    [description] => &nbsp;新年あけましておめでとうございます！旧年中は最高の魂で陰陽座を支えてくださって、本当にありがとうございました。皆さまの魂に報いるよう、2013年も陰陽座らしくしっかりと前を向き一歩一歩歩んで参ります。本年も陰陽座をどうぞよろしくお願い申し上げます。皆...
+                )
+
+            [59] => SimpleXMLElement Object
+                (
+                    [link] => http://nekomamma.jugem.jp/?eid=633
+                    [title] => 今年一年ありがとうございました！
+                    [description] => &nbsp;あと少しで今年も終わりですね。2012年も、皆さまの熱い魂のおかげで最高に楽しく、幸せな年になりました！陰陽座を応援してくださったファンの皆さん、かかわってくださったサポートの方々、スタッフ、関係者の皆さま、本当にありがとうございました！！来年も共に...
+                )
+
+        )
+
+)
