@@ -41,6 +41,7 @@ if (!$res) {
 		':title' => $title,
 		':article_date' => $article_date
 	));
+	$message_sql = "INSERT INTO nukotan_article (link, title, article_date) VALUES ($link, $title, $article_date)";
 	$update_flag = true;
 } elseif ($res[0]['article_date'] != $article_date || $res[0]['title'] != $title) {
 	// update as a modified article	
@@ -51,6 +52,7 @@ if (!$res) {
 		':title' => $title,
 		':article_date' => $article_date
 	));
+	$message_sql = "UPDATE nukotan_article SET article_date = $article_date, title = $title WHERE link = $link";
 	$update_flag = true;
 } 
 
@@ -60,7 +62,7 @@ if ($update_flag) {
 
 $title", 0, 110);
 	$message .= " $link";
-	echo date('Ymd-His') . ' : ' . $message . "\n";
+	echo date('Ymd-His') . ' : ' . $message_sql . "\n";
 	// Send tweet
 	$to = new TwitterOAuth($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
 	if ($mode == "run") $req = $to->OAuthRequest($twitterURL, 'POST', array('status' => $message));
