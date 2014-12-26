@@ -22,7 +22,7 @@ if ($argc == 1) {
 			array_push($monthlyArchives, $matches[0]);
 		}
 	}
-	$monthlyArchive = array_unique($monthlyArchives);
+	$monthlyArchives = array_unique($monthlyArchives);
 } elseif ($argc == 2) {
 	array_push($monthlyArchives, '/?month=' . $argv[1]);
 }
