@@ -33,7 +33,7 @@ $message_sql .= print_r($res, true);
 $update_flag = false;
 
 // Set minimum tweet count to imported instagram article
-$sql = 'SELECT MIN(tweet_count) FROM nukotan_word UNION SELECT MIN(tweet_count) FROM instagram_rss';
+$sql = 'SELECT MIN(tweet_count) FROM (SELECT tweet_count FROM nukotan_word UNION SELECT tweet_count FROM instagram_rss) AS mix';
 $row = $dbh->query($sql)->fetch();
 $tweet_count = $row['MIN(tweet_count)'];
 
