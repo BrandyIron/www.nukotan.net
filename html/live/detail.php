@@ -1,11 +1,9 @@
 <?php
-require_once(dirname(__FILE__) . '/header.php');
+require_once(dirname(__FILE__) . '/../../lib/include/header.php');
+require_once(dirname(__FILE__) . '/../../lib/include/footer.php');
 require_once(dirname(__FILE__) . '/../../lib/include/nukotanDbh2.php');
+
 $dbh = getPDO();
-
-publishHeader();
-
-date_default_timezone_set('Asia/Tokyo');
 
 // Get Song Title
 $sql = "SELECT id, song FROM nukotan_live WHERE id = :id";
@@ -13,6 +11,11 @@ $sth = $dbh->prepare($sql);
 $sth->execute(array(':id' => $_GET['id']));
 $res = $sth->fetchAll();
 $song = $res[0]['song'];
+
+publishHeader("ぬこたん公演まとめ～{$song}");
+
+date_default_timezone_set('Asia/Tokyo');
+
 
 
 // Retrieving Performance History
@@ -114,19 +117,12 @@ if ($xml) {
 
 
 
-// Map
-
-
-
-
 print <<< DOC_END
-
 <!-- end of #playingnumber -->
 </div>
 <!-- end of #columns -->
 </div>
 <div id="chart_div" style="width: 900px; height: 500px;"></div>
-</body>
-</html>
 DOC_END;
-?>
+
+publishFooter();
