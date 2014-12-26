@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>ぬこたんグラフ(*´Д`)ﾊｧﾊｧ</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
+
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+			google.load('visualization', '1', {packages: ['corechart']});
+		</script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+					// Navbar tooltips
+					$('.navbar [title]').tooltip({
+placement: 'bottom'
+});
+					// Content tooltips
+					$('[role=main][title]').tooltip({
+placement: 'top'
+});
+					// Dropdowns
+					$('.dropdown-toggle').dropdown();
+
+					// Page index with fix nav
+					$('#pageindex a[href^="#"]').click(function() {
+						if ($(document).width() > 768) {
+						$(document).scrollTop(($("#" + this.href.replace(/.*#/, "")).offset().top) - $(".navbar-fixed-top").height());
+						return false;
+						} else {
+						return true;
+						}
+						});
+});
+</script>
+
+		<!-- Refer plot data -->
+		<script type="text/javascript" src="./deviations.js"></script>
+		<script type="text/javascript" src="./posttimes.js"></script>
+		<script type="text/javascript" src="./live_counts.js"></script>
+
+		<script type="text/javascript">
+			function drawOnmyozaGuitarCovers() {
+				var data = google.visualization.arrayToDataTable(deviations);
+
+				var options = {
+title: 'Onmyo-za Guitar Covers',
+       vAxis: {
+title: "Video Title",
+       textStyle: {fontSize: 10}
+       },
+hAxis: {
+title: "Deviation",
+       gridlines: {color: '#CDCDCD', count: 50},
+       minorGridLines: {color: '#CDCDCD', count: 40},
+       logScale: true
+       },
+legend: {
+position: 'top', textStyle: {fontSize: 12}
+	},
+orientation: 'vertical',
+	     seriesType: 'line',
+	     dataOpacity: 0.5
+				};
+
+				var chart = new google.visualization.ComboChart(document.getElementById('chart_onmyo-za_guitar_cover'));
+				chart.draw(data, options);
+			}
+
+function drawNekomammaPostTime() {
+	var data = google.visualization.arrayToDataTable(posttimes);
+	var options = {
+title: 'Nekomamma PostTime',
+       is3D: true
+	};
+
+	var chart = new google.visualization.PieChart(document.getElementById('chart_nekomamma_posttime'));
+	chart.draw(data, options);
+}
+
+function drawLiveCounts() {
+	var data = google.visualization.arrayToDataTable(live_counts);
+	var options = {
+title: 'Live Counts',
+       vAxis: {title: 'Counts'},
+       hAxis: {title: 'Date'},
+       series: {3: {targetAxisIndex: 1},
+	       4: {targetAxisIndex: 1}}
+	};
+
+	var chart = new google.visualization.AreaChart(document.getElementById('chart_live_counts'));
+	chart.draw(data, options);
+}
+
+google.setOnLoadCallback(drawOnmyozaGuitarCovers);
+google.setOnLoadCallback(drawNekomammaPostTime);
+google.setOnLoadCallback(drawLiveCounts);
+</script>
+
+
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="//getbootstrap.com/examples/starter-template/starter-template.css">
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!-- [if lt IE9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://css.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N3WN4L"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N3WN4L');</script>
+
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="http://www.nukotan.net/">ぬこたん☆どっとねっと(*´Д`)ﾊｧﾊｧ</a></li>
+					<li><a href="http://www.nukotan.net/live/">ぬこたん公演まとめ(*´Д`)ﾊｧﾊｧ</a></li>
+					<li><a href="http://www.nukotan.net/chart/">ぬこたんグラフ(*´Д`)ﾊｧﾊｧ</a></li>
+					<li><a href="http://www.nukotan.net/quiz/">ぬこたんクイズ(*´Д`)ﾊｧﾊｧ</a></li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="page-header">
+			<h1>ぬこたんグラフ(*´Д`)ﾊｧﾊｧ</h1>
+			<p class="lead">ぬこたんについてグラフ化できるものをまとめます。</p>
+		</div>
+		<div class="page-container">
+			<div class="row">
+				<nav class="span9" id="pageindex">
+				<div class="well">
+					<ul>
+						<li><a href="#onmyo-za_guitar_cover">Onmyo-za Guitar Coversを折れ線グラフで表してみた</a></li>
+						<li><a href="#nekomamma_posttime">ねこまんま投稿時間を円グラフで表してみた</a></li>
+						<li><a href="#live_counts">ぬこたん公演回数推移をエリアグラフで表してみた</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<h3 id="onmyo-za_guitar_cover">Onmyo-za Guitar Coversを折れ線グラフで表してみた</h3>
+		<ul>
+			<li>私のギター的ぬこたん(*´Д`)ﾊｧﾊｧの軌跡を折れ線グラフにしました。</li>
+			<li><a href="http://www.youtube.com/playlist?list=PL5FFFA409EAE8FAC4">Onmyo-za Guitar Covers(@YouTube)</a>と<a href="http://www.nicovideo.jp/mylist/12683379">ぬこたん(*´Д`)ﾊｧﾊｧ　陰陽座演奏動画(@ニコニコ動画)</a>それぞれの再生数(view)とレイティング(rating, ニコ動の場合はマイリス)を偏差値(deviation)で表しています。</li>
+			<li>日次でデータを更新しています。</li>
+			<li>動画情報を英語に統一し海外ユーザ向けに発信しているYouTubeと、国内向けに発信しているニコ動で再生数/レイティングの傾向の差を把握したくて作ってみました。</li>
+			<li>動画数(行数)が多いせいか表示領域がなかなかいうことききません(；´Д｀)</li>
+			<li>鬼子母神の無双っぷりにより、横軸は対数表示にしています。</li>
+		</ul>
+
+		<div id="chart_onmyo-za_guitar_cover" style="width: 1200px; height: 5000px;"></div>
+
+		<h3 id="nekomamma_posttime">ねこまんま投稿時間を円グラフで表してみた</h3>
+		<ul>
+			<li>ぬこたんがねこまんまに投稿する時間帯の傾向を円グラフにしました。</li>
+			<li>ねこまんま通信の記事の時間を取得し、これを「投稿時間」としています。ただし、実際に公開される時間と若干開きがあるようです(投稿時間ではなく記事を書き始めた時間?)。</li>
+			<li>ねこまんま通信の更新を検知するタイミングで更新しています。</li>
+			<li>投稿時間からぬこたんの生活リズムおよび傾向を探りたくて作ってみました。</li>
+		</ul>
+
+		<div id="chart_nekomamma_posttime" style="width: 900px; height: 500px;"></div>
+
+
+		<h3 id="live_counts">ぬこたん公演回数推移をエリアグラフで表してみた</h3>
+		<ul>
+			<li>ぬこたんが執り行ってきた公演回数と演奏してきた楽曲の数の推移をエリアグラフにしました。</li>
+			<li>月単位でその月の回数とその月までの累計をプロットしています。</li>
+			<li>月次でデータを更新しています。</li>
+			<li>よくぬこたんはれっきとしたライブバンドであると紹介されますが、その真偽の程を確かめるために作ってみました。</li>
+		</ul>
+
+		<div id="chart_live_counts" style="width: 1000px; height: 600px;"></div>
+
+
+	</div><!-- /.container -->
+
+</body>
+</html>
+

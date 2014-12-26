@@ -1,6 +1,9 @@
 <?php
-require_once(dirname(__FILE__) . '/../lib/include/nukotanDbh.php');
+require_once(dirname(__FILE__) . '/header.php');
+require_once(dirname(__FILE__) . '/../../lib/include/nukotanDbh2.php');
 $dbh = getPDO();
+
+publishHeader();
 
 date_default_timezone_set('Asia/Tokyo');
 
@@ -12,25 +15,7 @@ $res = $sth->fetchAll();
 $song = $res[0]['song'];
 
 
-print <<< DOC_END
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-DOC_END;
-
-echo "<title>$song (*´Д`)ﾊｧﾊｧ</title>";
-
-print <<< DOC_END
-<link type="text/css" rel="stylesheet" href="css/base.css" media="all" />
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-darkness/jquery-ui.css" rel="stylesheet" />
-DOC_END;
-
-// History
+// Retrieving Performance History
 $sql = "SELECT song, date FROM nukotan_live WHERE song = '" . $song . "' ORDER BY date";
 
 $playhistory = array();
@@ -43,7 +28,14 @@ foreach ($dbh->query($sql) as $row) {
 	}
 	$playhistory["$yearmonth"]++;
 }
+// Detecting max value
+$max = 0;
+foreach ($playhistory as $k => $v) {
+	if ($v > $max) $max = $v;
+}
 
+
+// Filling 0 count to no performance yearmonth
 $date = new DateTime('NOW');
 $endyearmonth = $date->format('Y-m');
 
@@ -58,19 +50,33 @@ while($current <= $endyearmonth) {
 }
 ksort($playhistory);
 
+// Retrieving Live History
+$sql = 'select DATE_FORMAT(date, \'%Y-%m\') AS yearmonth, COUNT(DISTINCT date) from nukotan_live GROUP BY yearmonth ORDER BY yearmonth;';
+$livehistory = array();
+foreach ($dbh->query($sql) as $row) {
+	$livehistory[$row['yearmonth']] = $row['COUNT(DISTINCT date)'];
+}
+
 print <<< DOC_END
 <script type="text/javascript">
 	google.load("visualization", "1", {packages:["corechart"]});
 	google.setOnLoadCallback(drawChart);
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-			['YearMonth', 'Count'],
+			['YearMonth', 'PerformanceCount', 'LiveCount'],
 DOC_END;
 
+// Filling output array
 $extract_array = array();
 foreach ($playhistory as $yearmonth => $count) {
-	array_push($extract_array, "['{$yearmonth}', $count]");
+	if ($livehistory[$yearmonth] != false) {
+		array_push($extract_array, "['{$yearmonth}', $count, {$livehistory[$yearmonth]}]");
+	} else {
+		array_push($extract_array, "['{$yearmonth}', $count, 0]");
+	}
 }
+
+
 echo implode(',', $extract_array);
 
 print <<< DOC_END
@@ -79,38 +85,31 @@ print <<< DOC_END
 		var options = {
 			'title' : 'nukotan', 
 			'width' : 900,
-			'height' : 500
+			'height' : 500,
+			'legend' : {position: 'top', maxLines: 3},
+			'bar' : {groupWidth: '75%'}
 		};
 		
-		var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+		var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
 		chart.draw(data, options);
 	}
 </script>
-
-
-</head>
-
-<body>
-<div id="columns">
-<h1 class="page-title">ぬこたん☆公演まとめβ (*´Д`)ﾊｧﾊｧ</h1>
-DOC_END;
-
-print <<< DOC_END
 <div id="playingnumber">
 DOC_END;
 echo "<h2 class=\"title\">$song (*´Д`)ﾊｧﾊｧ</h2>";
 
 // YouTube Movie
-$contents = file_get_contents("http://gdata.youtube.com/feeds/api/videos?vq=" . $song);
+$contents = file_get_contents("http://gdata.youtube.com/feeds/api/videos?vq=陰陽座+" . $song);
 //echo "http://gdata.youtube.com/feeds/api/videos?vq=" . $song;
 $xml = simplexml_load_string($contents);
-$url = $xml->entry->link->attributes()->href;
+if ($xml) {
+	$url = $xml->entry->link->attributes()->href;
 
-//echo $url;
-$video_id = preg_replace('@(http://www\.youtube\.com/watch\?v=)|(&feature=youtube_gdata)@i', '', $url);
-echo "<iframe width='1' height='1' src='http://www.youtube.com/embed/' frameborder='0' allowfullscreen></iframe>";
-echo "<iframe width='420' height='315' src='http://www.youtube.com/embed/{$video_id}' frameborder='0' allowfullscreen></iframe>";
-
+	//echo $url;
+	$video_id = preg_replace('@(http://www\.youtube\.com/watch\?v=)|(&feature=youtube_gdata)@i', '', $url);
+	echo "<iframe width='1' height='1' src='http://www.youtube.com/embed/' frameborder='0' allowfullscreen></iframe>";
+	echo "<iframe width='420' height='315' src='http://www.youtube.com/embed/{$video_id}' frameborder='0' allowfullscreen></iframe>";
+}
 
 
 
