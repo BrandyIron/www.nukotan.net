@@ -57,8 +57,8 @@ if (!$res && $link) {
 		':link' => $link,
 		':title' => $title,
 		':article_date' => $article_date,
-		'image_path' => $image_path,
-		'tweet_count' => $tweet_count
+		':image_path' => $image_path,
+		':tweet_count' => $tweet_count
 	));
 	$message_sql .= "UPDATE instagram_rss SET article_date = $article_date, title = $title, image_path = $image_path, tweet_count = $tweet_count WHERE link = $link";
 	$update_flag = true;
