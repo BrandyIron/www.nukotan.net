@@ -1,6 +1,9 @@
 <?php
 
-include(dirname(__FILE__) . '/../include/simplehtmldom/simple_html_dom.php');
+require_once(dirname(__FILE__) . '/../include/simplehtmldom/simple_html_dom.php');
+require_once(dirname(__FILE__) . '/../include/nukotanDbh2.php');
+
+$dbh = getPDO();
 
 date_default_timezone_set('Asia/Tokyo');
 $lastmonth = date('Ym', strtotime(date('Y-m-1').' -1 month'));
@@ -8,15 +11,6 @@ $thismonth = date('Ym');
 
 $baseurl = "http://nekomamma.jugem.jp";
 
-$dsn = 'mysql:host=localhost;dbname=nukotan_word';
-$username = 'nukotan';
-$password = '0716';
-$options = array(
-	PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
-);
-
-$dbh = new PDO($dsn, $username, $password, $options);
-	
 // Get monthly archive
 $monthlyArchives = array();
 
@@ -88,10 +82,13 @@ foreach ($monthlyArchives as $monthlyArchive) {
 			$sth->execute(array(':word' => $word, ':referer' => $referer));
 			$res = $sth->fetchAll();
 			if ($res[0]['count(id)'] == 0) {
-				$sql = "INSERT INTO nukotan_word (word, referer) VALUES (:word, :referer)";
+				$sql = "SELECT MIN(tweet_count) FROM nukotan_word UNION SELECT MIN(tweet_count) FROM instagram_rss";
+				$row = $dbh->query($sql)->fetch();
+				$tweet_count = $row['MIN(tweet_count)'];
+				$sql = "INSERT INTO nukotan_word (word, referer, tweet_count) VALUES (:word, :referer, :tweet_count)";
 				
 				$sth = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
-				$sth->execute(array(':word' => $word, ':referer' => $referer));
+				$sth->execute(array(':word' => $word, ':referer' => $referer, ':tweet_count' => $tweet_count));
 			}
 		}
 	}

@@ -1,2 +1,2 @@
-SET NAMES utf8;
-INSERT nukotan_song (song) VALUES ('氷の楔'), ('陰陽師'), ('歪む月'), ('組曲「黒塚」～安達ヶ原'), ('組曲「黒塚」～鬼哭啾々'), ('月姫'), ('面影'), ('星の宿り'), ('夢虫'), ('月花'), ('蛟龍の巫女'), ('鎮魂の歌');
+SET NAMES 'utf8';
+INSERT INTO nukotan_song (song) VALUES ('雲は龍に舞い、風は鳳に歌う')

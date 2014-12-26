@@ -1,5 +1,6 @@
 <?php
-include(dirname(__FILE__) . '/../include/simplehtmldom/simple_html_dom.php');
+require_once(dirname(__FILE__) . '/../include/simplehtmldom/simple_html_dom.php');
+require_once(dirname(__FILE__) . '/calc_livehistory.php');
 
 date_default_timezone_set('Asia/Tokyo');
 $lastmonth = date('Ym', strtotime(date('Y-m-1').' -1 month'));
@@ -38,6 +39,7 @@ foreach ($biography_list as $l) {
 		}
 	}
 }
+publishLiveCounts();
 
 
 function getSetListUrl($url) {
@@ -82,19 +84,14 @@ function getLiveInfo($url) {
 }
 
 function insertLiveInfo($liveinfo, $param) {
-	$dsn = 'mysql:host=localhost;dbname=nukotan_live';
-	$username = 'nukotan';
-	$password = '0716';
-	$options = array(
-		PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
-	);
 
-	$dbh = new PDO($dsn, $username, $password, $options);
+	require_once(dirname(__FILE__) . '/../include/nukotanDbh2.php');
+	$dbh = getPDO();
 	
 	foreach ($liveinfo['live_setLists'] as $song) {
 		$sql = "SELECT count(id) FROM nukotan_live WHERE date = :live_date AND song = :song";
 		$sth = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
-		$sth->execute(array(':live_date' => $liveinfo[live_date], ':song' => $song));
+		$sth->execute(array(':live_date' => $liveinfo['live_date'], ':song' => $song));
 		$res = $sth->fetchAll();
 		if ($res[0]['count(id)'] == 0 || $param != "new") {
 			$sql = "INSERT INTO nukotan_live (title, date, place, song) VALUES (:live_title, :live_date, :live_place, :song)";
