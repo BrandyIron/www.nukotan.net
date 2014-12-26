@@ -1,5 +1,4 @@
 <?php
-require_once(dirname(__FILE__) . '/../include/twitteroauth/twitteroauth.php');
 require_once(dirname(__FILE__) . '/../include/nukotanDbh2.php');
 require_once(dirname(__FILE__) . '/../include/tmhOAuth/tmhOAuth.php');
 require_once(dirname(__FILE__) . '/../../data/twitter_key.php');
