@@ -82,7 +82,7 @@ foreach ($monthlyArchives as $monthlyArchive) {
 			$sth->execute(array(':word' => $word, ':referer' => $referer));
 			$res = $sth->fetchAll();
 			if ($res[0]['count(id)'] == 0) {
-				$sql = "SELECT MIN(tweet_count) FROM nukotan_word UNION SELECT MIN(tweet_count) FROM instagram_rss";
+				$sql = "SELECT MIN(tweet_count) FROM (SELECT tweet_count FROM nukotan_word UNION SELECT tweet_count FROM instagram_rss) AS mix";
 				$row = $dbh->query($sql)->fetch();
 				$tweet_count = $row['MIN(tweet_count)'];
 				$sql = "INSERT INTO nukotan_word (word, referer, tweet_count) VALUES (:word, :referer, :tweet_count)";
