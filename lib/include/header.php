@@ -29,6 +29,10 @@ EOD;
 		<link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css"></style>
 		<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
 
+		<!-- cirrusCloud -->
+		<link rel='stylesheet' id='wpcirrus-cloudStyle-css'  href='http://www.nukotan.net/css/cirrusCloud.css?ver=0.6.11' type='text/css' media='all' />
+		<script type='text/javascript' src='http://www.nukotan.net/js/cirrus_gwt/wp_cirrus_gwt.nocache.js?ver=0.6.11'></script>
+
                 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
                 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
                 <!-- [if lt IE9]>

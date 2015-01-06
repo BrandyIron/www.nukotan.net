@@ -1,4 +1,6 @@
 <?php
+
+require_once(dirname(__FILE__) . '/../include/simplehtmldom/simple_html_dom.php');
 require_once(dirname(__FILE__) . '/../include/twitteroauth/twitteroauth.php');
 require_once(dirname(__FILE__) . '/../include/nukotanDbh2.php');
 require_once(dirname(__FILE__) . '/../../data/twitter_key.php');
@@ -11,16 +13,33 @@ $mode = $argv[1];
 
 $dbh = getPDO();
 
-// Get RSS from nukomamma
-$rss_url = 'http://nekomamma.jugem.jp/?mode=rss';
-if ($fileContents = file_get_contents($rss_url)) {
-	$xml = new SimpleXMLElement($fileContents);
-	$title = $xml->item[0]->title;
-	$link = $xml->item[0]->link;
-	$dc = $xml->item[0]->children('http://purl.org/dc/elements/1.1/');
-	$article_date = date('Y-m-d H:i:s', strtotime($dc->date));
-}
+// Parse nukomamma HTML
+$baseurl = 'http://nekomamma.jugem.jp/';
 
+// Get recent articles
+$html = file_get_html($baseurl);
+
+$eids = array();
+foreach ($html->find('div.menu_box a[href*=eid]') as $element) {
+	if (preg_match('/\?eid=[0-9]+/', $element, $matches)) {
+		array_push($eids, $matches[0]);
+	}
+}
+rsort($eids);
+
+// Get latest article
+$link = $baseurl . $eids[0];
+$html = file_get_html($link);
+foreach ($html->find('div.entry_title') as $element) {
+	$title = mb_convert_encoding($element->plaintext, 'UTF-8', 'EUC-JP');
+}
+foreach ($html->find('div.entry_date') as $element) {
+	$ymd = preg_replace('/\./', '-', explode(' ', $element->plaintext)[0]);
+}
+foreach ($html->find('div.entry_state') as $element) {
+	preg_match('/[0-9]{2}:[0-9]{2}/', $element->plaintext, $hi);
+}
+$article_date = "$ymd {$hi[0]}:00";
 
 // Check whether a same link article exists
 $sql = 'SELECT link, title, article_date FROM nukotan_rss WHERE link = :link';

@@ -49,7 +49,7 @@ if (!$res && $link) {
 	));
 	$message_sql .= "INSERT INTO instagram_rss (link, title, article_date, image_path, tweet_count) VALUES ($link, $title, $article_date, $image_path, $tweet_count)";
 	$update_flag = true;
-} elseif ($res[0]['article_date'] != $article_date || $res[0]['title'] != $title) {
+} elseif ($res[0]['article_date'] != $article_date) {
 	// update as a modified article	
 	$sql = 'UPDATE instagram_rss SET article_date = :article_date, title = :title, image_path = :image_path, tweet_count = :tweet_count WHERE link = :link';
 	$sth = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
