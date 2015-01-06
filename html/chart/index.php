@@ -1,6 +1,7 @@
 <?php
 require_once(dirname(__FILE__) . '/../../lib/include/header.php');
 require_once(dirname(__FILE__) . '/../../lib/include/footer.php');
+require_once(dirname(__FILE__) . '/../../lib/instagram_collection/collect_tags.php');
 
 publishHeader("ぬこたんグラフ(*´Д`)ﾊｧﾊｧ");
 
@@ -67,6 +68,12 @@ echo <<<EOD
 	google.setOnLoadCallback(drawLiveCounts);
 </script>
 
+<script type="text/javascript">
+	var wpcirrusRadiuscirrusCloudWidget = 0;
+	var wpcirrusRefreshratecirrusCloudWidget = 0;
+	var wpcirrusFontColorcirrusCloudWidget;
+	var wpcirrusBackgroundColorcirrusCloudWidget;
+</script>
 
 
 	<div class="container">
@@ -83,6 +90,7 @@ echo <<<EOD
 						<li><a href="#onmyo-za_guitar_cover">Onmyo-za Guitar Coversを折れ線グラフで表してみた</a></li>
 						<li><a href="#nekomamma_posttime">ねこまんま投稿時間を円グラフで表してみた</a></li>
 						<li><a href="#live_counts">ぬこたん公演回数推移をエリアグラフで表してみた</a></li>
+						<li><a href="#instagram_tagcloud">ぬこたんInstagramのタグをタグクラウドで表してみた</a></li>
 					</ul>
 				</div>
 			</div>
@@ -121,6 +129,19 @@ echo <<<EOD
 
 		<div id="chart_live_counts" style="width: 1000px; height: 600px;"></div>
 
+		<h3 id="instagram_tagcloud">ぬこたんInstagramのタグをタグクラウドで表してみた</h3>
+		<ul>
+			<li>ぬこたんがInstagramに投稿した写真に付けられたタグをタグクラウドで表してみました。</li>
+			<li>調べた限り、Instagramが公式に提供するブラウザでアクセス可能なタグ一覧ページが見つけられなかったため、ここではタグをクリックした場合はそのタグがついた最新の記事へリンクさせるようにしています。</li>
+		</ul>
+
+		<div style="position: relative; height: 720px; width: 720px;" id="cirrusCloudWidget">
+EOD;
+
+publishCloudTag();
+
+echo <<<EOD
+		</div>
 
 	</div><!-- /.container -->
 EOD;
