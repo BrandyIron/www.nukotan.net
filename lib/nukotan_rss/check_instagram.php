@@ -1,5 +1,5 @@
 <?php
-require_once(dirname(__FILE__) . '/../include/nukotanDbh2.php');
+require_once(dirname(__FILE__) . '/../include/nukotanDbh.php');
 require_once(dirname(__FILE__) . '/../include/tmhOAuth/tmhOAuth.php');
 require_once(dirname(__FILE__) . '/../../data/twitter_key.php');
 
@@ -19,6 +19,9 @@ if ($fileContents = file_get_contents($rss_url)) {
 	$image_path = $image_object->a->img->attributes()->src[0];
 	$pubDate = preg_replace('/ \+0900/', '', $xml->channel->item[0]->pubDate);
 	$article_date = date('Y-m-d H:i:s', strtotime($pubDate));
+} else {
+	error_log("Fail to get RSS");
+	exit;
 }
 
 // Check whether a same link article exists

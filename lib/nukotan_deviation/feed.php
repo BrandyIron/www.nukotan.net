@@ -1,5 +1,6 @@
 <?php
-
+require_once(dirname(__FILE__) . '/../include/nukotanDbh2.php');
+require_once(dirname(__FILE__) . '/../include/statistics.php');
 
 function getYoutubeFeed()
 {
@@ -60,7 +61,7 @@ function getNicoNicoFeed()
 
 function storeFeedData($feedArr)
 {
-	require_once('../include/nukotanDbh2.php');
+	require_once(dirname(__FILE__) . '/../include/nukotanDbh2.php');
 	$dbh = getPDO();
 
 	foreach($feedArr as $feed) {
@@ -93,9 +94,6 @@ function storeFeedData($feedArr)
 
 function updateDeviation($table)
 {
-	require_once('../include/nukotanDbh2.php');
-	require_once('../include/statistics.php');
-
 	$videoIdArr = $viewCountArr = $ratingCountArr = $viewDeviationArr = $ratingDeviationArr = array();
 	$dbh = getPDO();
 
@@ -118,7 +116,6 @@ function updateDeviation($table)
 }
 
 function connectYoutubeNicoNico() {
-	require_once('../include/nukotanDbh2.php');
 	$dbh = getPDO();
 
 	// Truncate rel_video table first
@@ -155,7 +152,6 @@ function connectYoutubeNicoNico() {
 
 function publishDeviation()
 {
-	require_once('../include/nukotanDbh2.php');
 	$dbh = getPDO();
 
 	$output_filename = '/../../html/chart/deviations.js';

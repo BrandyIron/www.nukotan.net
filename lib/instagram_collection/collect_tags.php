@@ -12,7 +12,7 @@ function publishCloudTag() {
 	foreach ($dbh->query($sql) as $row) {
 		preg_match_all('/(#[^#]*)/', $row['title'], $matches);
 		foreach ($matches[0] as $match) {
-			$match = trim($match, '#');
+			$match = trim($match, '# ');
 			if (array_key_exists($match, $tags)) {
 				$tags[$match] = array('count' => $tags[$match]['count'] + 1, 'link' => $row['link']);
 			} else {
