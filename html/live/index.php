@@ -32,7 +32,7 @@ echo <<<EOD
                 <p class="lead"></p>
         </div>
 
-<form action=/live/ method='POST'>
+<form method='POST'>
 	<div class="form-group">
 		<label for="startdate">Start Date</label>
 		<input type="text" id="startdate" name="startdate" class="form-control">
@@ -55,17 +55,21 @@ foreach ($dbh->query($sql) as $row) {
 	}
 }
 
-$checked = '';
-if (isset($_POST['nukotan']) && $_POST['nukotan'][0] == 'nukotan') $checked = "checked";
+$checked = array();
+if (isset($_POST['nukotan']) && $_POST['nukotan'][0] == 'nukotan') $checked['nukotan'] = "checked";
+if (isset($_POST['makoto']) && $_POST['makoto'][0] == 'makoto') $checked['makoto'] = "checked";
 
 echo <<<EOD
 </select>
 </div>
 <div class="checkbox">
-	<label>
 	<input type="checkbox" name="nukotan[]" value="nukotan" 
 EOD;
-echo "$checked >Nukotan</label></div>";
+echo "{$checked['nukotan']} ><label>Nukotan</label><br>";
+echo <<<EOD
+<input type="checkbox" name="makoto[]" value="makoto" 
+EOD;
+echo "{$checked['makoto']} ><label>Makoto (<a href='./makoto.php'>Titles that Makoto has not performed yet</a>)</label></div>";
 echo <<<EOD
 <input type="submit" class="btn btn-primary" value="Submit">
 </form>
@@ -74,7 +78,10 @@ EOD;
 // Check a conditions
 $conds = array();
 $cond_text = '';
-if (isset($_POST['startdate']) && isset($_POST['enddate']) && preg_match('/\d{4}-\d{2}-\d{2}/', $_POST['startdate']) && preg_match('/\d{4}-\d{2}-\d{2}/', $_POST['enddate'])) {
+if (isset($_POST['makoto']) && $_POST['makoto'] && $_POST['makoto'][0] == 'makoto') {
+	array_push($conds, "date >= '2012-03-20'");
+	$cond_text .= "<li>Titles that Makoto has already performed</li>";
+} elseif (isset($_POST['startdate']) && isset($_POST['enddate']) && preg_match('/\d{4}-\d{2}-\d{2}/', $_POST['startdate']) && preg_match('/\d{4}-\d{2}-\d{2}/', $_POST['enddate'])) {
 	array_push($conds, "date >= '{$_POST['startdate']}' AND date <= '{$_POST['enddate']}'");
 	$cond_text .= "<li>Period : {$_POST['startdate']} ~ {$_POST['enddate']}</li>";
 }

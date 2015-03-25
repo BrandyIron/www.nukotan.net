@@ -29,7 +29,7 @@ foreach ($dbh->query($sql) as $row) {
 		$startyearmonth = $yearmonth;
 		$isfirst = false;
 	}
-	$playhistory["$yearmonth"]++;
+	(array_key_exists($yearmonth, $playhistory)) ? $playhistory["$yearmonth"]++ : $playhistory["$yearmonth"] = 1;
 }
 // Detecting max value
 $max = 0;
@@ -72,7 +72,7 @@ DOC_END;
 // Filling output array
 $extract_array = array();
 foreach ($playhistory as $yearmonth => $count) {
-	if ($livehistory[$yearmonth] != false) {
+	if (array_key_exists($yearmonth, $livehistory) && $livehistory[$yearmonth] != false) {
 		array_push($extract_array, "['{$yearmonth}', $count, {$livehistory[$yearmonth]}]");
 	} else {
 		array_push($extract_array, "['{$yearmonth}', $count, 0]");
